@@ -19,7 +19,7 @@ const Navbar = () => {
   const user = useSelector((state) => state.auth.user);
 
   const getUser = async () => {
-    const res = await axios.get('http://localhost:5000/api/get-user', {
+    const res = await axios.get('https://food-delivery-react-1.onrender.com/api/get-user', {
       withCredentials: true,
       headers: {
         'Referrer-Policy': 'no-referrer-when-downgrade' // Use for testing only
@@ -38,7 +38,7 @@ const Navbar = () => {
 
   return (
     <nav
-      className="relative flex flex-col lg:flex-row justify-between py-3 mx-6 mb-10 bg-cover bg-center"
+      className="relative flex flex-col lg:flex-row justify-between py-6  px-6 mx-6 mb-10 bg-cover bg-center "
       style={{
         backgroundImage: "url('https://img.freepik.com/premium-photo/flat-lay-composition-pasta-with-copyspace_23-2148189938.jpg?ga=GA1.1.1268874209.1722447087&semt=ais_hybrid')", // Replace with your image URL
       }}
@@ -68,7 +68,7 @@ const Navbar = () => {
           className="p-3 pl-10 border border-gray-400 text-sm rounded-lg outline-none w-full lg:w-[25vw]"
         />
         <GiHamburgerMenu
-          className={`absolute  right-3 bottom-3 transform -translate-y-1/2 text-2xl text-gray-600 cursor-pointer ${
+          className={`absolute right-7 bottom-3 transform -translate-y-1/2 text-2xl text-gray-600 cursor-pointer md:p2 ${
             toggleNav && "hidden"
           } transition-all ease-in-out duration-500`}
           onClick={() => setToggleNav(true)}
@@ -77,7 +77,7 @@ const Navbar = () => {
 
       {/* Close Button */}
       <MdClose
-        className={`absolute top-8 right-5 text-2xl cursor-pointer text-gray-400 ${
+        className={`absolute top-12 right-14 text-2xl cursor-pointer text-gray-400 ${
           !toggleNav && "hidden"
         } transition-all duration-500 z-20`}
         onClick={() => setToggleNav(false)}
