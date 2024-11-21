@@ -12,7 +12,7 @@ const VerifyOtp = () => {
   const handleVerifyOtp = async (e) => {
     e.preventDefault();
     try {
-      const res = await axios.put("https://food-delivery-react-1.onrender.com/api/verify-otp", {
+      const res = await axios.put("https://food-delivery-react-1.onrender.com  /api/verify-otp", {
         otp,
         newPassword: password,
       });

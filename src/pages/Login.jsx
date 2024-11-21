@@ -15,7 +15,7 @@ const Login = () => {
   const handleLogin = async (e) => {
     e.preventDefault();
 
-    const res = await axios.post("https://food-delivery-react-1.onrender.com/api/login", {
+    const res = await axios.post("https://food-delivery-react-1.onrender.com  /api/login", {
       email,
       password,
     });
