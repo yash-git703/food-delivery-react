@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 const NavList = ({ toggleNav, setToggleNav, auth }) => {
   const handleLogout = async () => {
     try {
-      const res = await axios.get("https://food-delivery-react-1.onrender.com  /api/logout");
+      const res = await axios.get("https://food-delivery-react-1.onrender.com/api/logout");
       // const data = await res.data; // Optional if you don't need to use data.message
       toast.success("You have successfully logged out!"); // Custom message
       window.location.href = "/";
