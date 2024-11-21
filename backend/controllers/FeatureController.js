@@ -199,8 +199,8 @@ const checkout = async (req, res) => {
           quantity: item.quantity,
         };
       }),
-      success_url: "https://flavoro-mern.vercel.app/success",
-      cancel_url: "https://flavoro-mern.vercel.app/",
+      success_url: "https://flavoro-mern.netlify.app/success",
+      cancel_url: "https://flavoro-mern.netlify.app/",
     });
 
     res.json({ url: session.url });
