@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react"
+import  { useState, useEffect } from "react"
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Home from "./pages/Home";
 import Success from "./pages/Success";
@@ -8,22 +8,22 @@ import Login from "./pages/Login";
 import Signup from "./pages/Signup";
 import ResetPassword from "./pages/ResetPassoword";
 import VerifyOtp from "./pages/VerifyOtp";
-import Preloader from "./components/Preloader"
+// import Preloader from "./components/Preloader"
 
 function App() {
-  const [loading, setLoading] = useState(true);
+  // const [loading, setLoading] = useState(true);
 
-  useEffect(() => {
-    // Simulate a loading process, e.g., fetching critical data or rendering
-    const timer = setTimeout(() => {
-      setLoading(false); // Hide the preloader after 3 seconds
-    }, 5000);
+  // useEffect(() => {
+  //   // Simulate a loading process, e.g., fetching critical data or rendering
+  //   const timer = setTimeout(() => {
+  //     setLoading(false); // Hide the preloader after 3 seconds
+  //   }, 5000);
 
-    return () => clearTimeout(timer); // Cleanup the timer
-  }, []);
-  if (loading) {
-    return <Preloader />; // Show the preloader while loading is true
-  }
+  //   return () => clearTimeout(timer); // Cleanup the timer
+  // }, []);
+  // if (loading) {
+  //   return <Preloader />; // Show the preloader while loading is true
+  // }
   return (
     <BrowserRouter>
       <Routes>
