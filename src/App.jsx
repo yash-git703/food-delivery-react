@@ -11,19 +11,33 @@ import VerifyOtp from "./pages/VerifyOtp";
 import Preloader from "./components/Preloader"
 
 function App() {
+
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    // Simulate a loading process, e.g., fetching critical data or rendering
-    const timer = setTimeout(() => {
-      setLoading(false); // Hide the preloader after 3 seconds
-    }, 5000);
+    // Check if the preloader has already been shown
+    const preloaderShown = localStorage.getItem("preloaderShown");
 
-    return () => clearTimeout(timer); // Cleanup the timer
+    if (preloaderShown) {
+      // If the preloader was already shown, skip it
+      setLoading(false);
+    } else {
+      // Otherwise, show the preloader
+      const timer = setTimeout(() => {
+        setLoading(false);
+        // Mark the preloader as shown in local storage
+        localStorage.setItem("preloaderShown", "true");
+      }, 5000); // 5-second preloader
+
+      return () => clearTimeout(timer); // Cleanup the timer
+    }
   }, []);
+
   if (loading) {
-    return <Preloader />; // Show the preloader while loading is true
+    return <Preloader />; // Render the preloader only if loading
   }
+
+  
   return (
     <BrowserRouter>
       <Routes>
