@@ -8,7 +8,7 @@ import Login from "./pages/Login";
 import Signup from "./pages/Signup";
 import ResetPassword from "./pages/ResetPassoword";
 import VerifyOtp from "./pages/VerifyOtp";
-// import Preloader from "./components/Preloader"
+import Preloader from "./components/Preloader"
 
 function App() {
   const [loading, setLoading] = useState(true);
