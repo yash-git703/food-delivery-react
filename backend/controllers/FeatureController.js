@@ -201,6 +201,7 @@ const checkout = async (req, res) => {
       }),
       success_url: "https://flavoro-mern.netlify.app/success",
       cancel_url: "https://flavoro-mern.netlify.app/",
+     
     });
 
     res.json({ url: session.url });

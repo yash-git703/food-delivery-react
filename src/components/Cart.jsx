@@ -24,7 +24,7 @@ const Cart = () => {
   const navigate = useNavigate();
 
   const checkout = async () => {
-    const res = await axios.get("https://food-delivery-react-1.onrender.com/api/checkout");
+    const res = await axios.get("http://localhost:5000/api/checkout");
     const {url}= await res.data;
     window.location.href = url;
   };
@@ -32,9 +32,9 @@ const Cart = () => {
   return (
     <>
       <div
-        className={`fixed right-0 top-0 w-full lg:w-[20vw] h-full p-5 bg-white mb-3 ${
+        className={`fixed right-0 top-0 w-full lg:w-[20vw] h-full p-5 bg-white  mb-3 ${
           activeCart ? "translate-x-0" : "translate-x-full"
-        } transition-all duration-500 z-50`}
+        } transition-all duration-500 z-50 `}
       >
         <div className="flex justify-between items-center my-3">
           <span className="text-xl font-bold text-gray-800">My Order</span>
@@ -70,7 +70,7 @@ const Cart = () => {
       </div>
       <FaShoppingCart
         onClick={() => setActiveCart(!activeCart)}
-        className={`rounded-full bg-white shadow-md text-5xl p-3 fixed bottom-4 right-4 ${
+        className={`rounded-full bg-white shadow-md text-5xl p-3 fixed bottom-4 right-4 cursor-pointer ${
           totalQty > 0 && "animate-bounce delay-500 transition-all"
         } `}
       />
