@@ -1,5 +1,5 @@
 {
-   "proxy": "http://localhost:5000  ",
+   "proxy": "https://food-delivery-react-1.onrender.com  ",
   "name": "flavoro-clone",
   "private": true,
   "version": "0.0.0",

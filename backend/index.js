@@ -13,7 +13,7 @@ app.use(
     origin: [
       "http://localhost:5173",
       "https://flavoro-mern.netlify.app",
-      "http://localhost:5000",
+      "https://food-delivery-react-1.onrender.com",
     ],
     credentials: true,
   })
@@ -24,7 +24,7 @@ app.use((req, res, next) => {
     "Access-Control-Allow-Origin",
     "http://localhost:5173",
     "https://flavoro-mern.netlify.app",
-    "http://localhost:5000"
+    "https://food-delivery-react-1.onrender.com"
   );
   res.header("Access-Control-Allow-Credentials", "true");
   next();
